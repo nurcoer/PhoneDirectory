@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace PhoneDirectory.WebAPI.Controllers
 {
-    public class DirectorysController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DirectorysController : ControllerBase
     {
         IDirectoryService _directoryService;
         public DirectorysController(IDirectoryService directoryService)
