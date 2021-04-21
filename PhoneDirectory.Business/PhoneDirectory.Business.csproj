@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PhoneDirectory.Core\PhoneDirectory.Core.csproj" />
+    <ProjectReference Include="..\PhoneDirectory.DataAccess\PhoneDirectory.DataAccess.csproj" />
+    <ProjectReference Include="..\PhoneDirectory.Entities\PhoneDirectory.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
