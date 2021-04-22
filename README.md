@@ -8,12 +8,12 @@
     
    ## DB Tables
    - Person
-    - personId
-    - lastName
-    - firstName
-    - description
-    - directoryId
-    - phone Number
+      - personId
+      - lastName
+      - firstName
+      - description
+      - directoryId
+      - phone Number
         
    - Directory 
         - directoryId
