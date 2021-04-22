@@ -1,29 +1,29 @@
 # PhoneDirectory
 
  # BackEnd 
-    - EntityFrameworkCore
-    - Code Fist 
-    - SOLİD principle
-    - Used Migration for Db 
+   - EntityFrameworkCore
+   - Code Fist 
+   - SOLİD principle
+   - Used Migration for Db 
     
-    ## DB Tables
-      - Person
-        - personId
-        - lastName
-        - firstName
-        - description
-        - directoryId
-        - phone Number
+   ## DB Tables
+   - Person
+    - personId
+    - lastName
+    - firstName
+    - description
+    - directoryId
+    - phone Number
         
-      - Directory 
+   - Directory 
         - directoryId
         - Title
          
  # Frontend
-    - Angular 
-    - Bootstrap
-    - Toastr
-    - Angular Pipe
+   - Angular 
+   - Bootstrap
+   - Toastr
+   - Angular Pipe
     
     
     
