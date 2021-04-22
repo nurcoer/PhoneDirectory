@@ -1,0 +1,23 @@
+
+        <br><br>
+<table class="table table-hover"  *ngIf="dataLoaded == true">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Kişi Adı</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+       *ngFor=" let person of persons | personFilter: filterText"
+       routerLink="/personsDetail/{{person.id}}"
+      >
+        <th scope="row">{{person.id}}</th>
+        <td>{{person.firstName}} {{person.lastName}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+ 

@@ -1,0 +1,23 @@
+
+<div>
+    <ul  class="list-group list-group-flush ">
+      <h4 class="nameTitle">{{person.firstName}} {{person.lastName}}</h4>
+      <li class="list-group-item"><span style="font-weight: bold">Telefon Numarası:</span>   {{ person.phoneNumber }}</li>
+      <li class="list-group-item"><span style="font-weight: bold">Açıklama: </span>   {{ person.description}}</li>
+      <li class="list-group-item"><span style="font-weight: bold">Rehber Adı:</span> {{ directoryTitle}}</li>
+      <button
+      class="button button1"
+      routerLink="/personsUpdate/{{person.id}}"
+      >
+      Güncelle
+    </button>
+      <button
+      (click)="this.handleWarningAlert(person)"
+      routerLink="/persons"
+      class="button button1">
+      Sil
+    </button>
+    </ul>
+    
+    
+  </div>

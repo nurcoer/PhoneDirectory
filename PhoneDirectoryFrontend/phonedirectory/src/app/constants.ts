@@ -1,0 +1,1 @@
+export const WEB_API = "https://localhost:44394/api/";

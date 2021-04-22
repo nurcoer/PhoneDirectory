@@ -1,0 +1,20 @@
+<div class="mainbody">
+  <app-navi></app-navi>
+  <div class="container body">
+    <br />
+    <div>
+      <button routerLink="/personsAdd" class="btn btn-success">
+        Rehbere Kişi Ekle
+      </button>
+      <div class="row">
+        <div class="col-md-6">
+          <app-person-list></app-person-list>
+        </div>
+        <div class="col-md-6">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

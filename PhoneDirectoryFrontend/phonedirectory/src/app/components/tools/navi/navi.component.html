@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="personsAdd">Phone Directory</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarsExample05"
+    aria-controls="navbarsExample05"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExample05" >
+    
+<div class="navbar-nav me-auto mb-2 mb-lg-0  navbar-collapse">
+  </div>
+  
+    <form for="filterText" class="form-inline my-2 my-md-0  ">
+      <input
+      [(ngModel)]="filterText"
+        class="form-control"
+        name="filterText"
+        id="filterText"
+        type="text"
+        placeholder="Search"
+      />
+    </form>
+    <button class="button button1 " routerLink="/persons/{{ filterText }}">
+      Ara
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,80 @@
+<div
+  class="card"
+  style="border-radius: 18px; color: darkgreen; border-color: darkolivegreen"
+>
+  <div class="card-header">
+    <h5 style="color: darkgreen" class="title font-weight-bold">
+      {{
+        operationType === "Add"
+          ? "Yeni Kişi Ekleyiniz."
+          : "Kişi'yi Güncelleyiniz."
+      }}
+    </h5>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="personForm">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">Ad</label>
+        <input
+          type="text"
+          formControlName="firstName"
+          placeholder="İsim"
+          class="form-control"
+          id="firstName"
+          aria-describedby="nameHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Soyad</label>
+        <input
+          type="text"
+          formControlName="lastName"
+          placeholder="Soyad"
+          class="form-control"
+          id="lastName"
+          aria-describedby="nameHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Açıklama</label>
+        <input
+          type="text"
+          formControlName="description"
+          placeholder="Açıklaması"
+          class="form-control"
+          id="description"
+          aria-describedby="nameHelp"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Telefon Numarası</label>
+        <input
+          type="number"
+          formControlName="phoneNumber"
+          placeholder="Telefon Numarası"
+          class="form-control"
+          id="phoneNumber"
+          aria-describedby="nameHelp"
+        />
+      </div>
+      <div class="card-body">
+        <label for="phoneDirectoryId">Rehber Adı</label>
+        <div class="form-group">
+          <select id="phoneDirectoryId" class="form-select" formControlName="phoneDirectoryId">
+            <option [ngValue]="directory.id" *ngFor="let directory of directories">
+              {{ directory.title }}
+            </option>
+          </select>
+        </div>
+        </div>
+
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="currentPersonId ? updatePerson() : addPerson()"
+      >
+        {{ currentPersonId ? "Güncelle" : "Ekle" }}
+      </button>
+    </form>
+  </div>
+</div>
