@@ -45,6 +45,8 @@ namespace PhoneDirectory.WebAPI
 
             services.AddSingleton<IDirectoryService, DirectoryManager>();
             services.AddSingleton<IDirectoryDal, EfDirectoryDal>();
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +58,7 @@ namespace PhoneDirectory.WebAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PhoneDirectory.WebAPI v1"));
             }
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

@@ -15,7 +15,7 @@ namespace PhoneDirectory.Business.Constants
     {
         public static string PhoneDirectoryAdd( bool isLanguage = false)
         {
-            return isLanguage ? "added phonebook" : "telefon rehberi eklendi.";
+            return isLanguage ? "added phonebook" : "telefon rehberi oluşturuldu.";
         }
         public static string PhoneDirectoryUpdate(bool isLanguage = false)
         {
@@ -40,19 +40,19 @@ namespace PhoneDirectory.Business.Constants
     {
         public static string PersonAdd(string personName, bool isLanguage = false)
         {
-            return isLanguage ? $"{personName.ToUpper()} added to phonebook." : $"{personName.ToUpper()} telefon rehberine eklendi.";
+            return isLanguage ? $"{personName.ToUpper()} added to phonebook." : $"{personName.ToUpper()}  rehberine eklendi.";
         }
         public static string PersonUpdate(string personName, bool isLanguage = false)
         {
-            return isLanguage ? $"{personName.ToUpper()} updated to phonebook." : $"{personName.ToUpper()} kişi güncellendi.";
+            return isLanguage ? $"{personName.ToUpper()} updated to phonebook." : $"{personName.ToUpper()} kişisi güncellendi.";
         }
         public static string PersonDelete(string personName, bool isLanguage = false)
         {
-            return isLanguage ? $"{personName.ToUpper()} deleted from phonebook." : $"{personName.ToUpper()} telefon rehberinden silindi.";
+            return isLanguage ? $"{personName.ToUpper()} deleted from phonebook." : $"{personName.ToUpper()} rehberden silindi.";
         }
         public static string PersonNotFound(string personName, bool isLanguage = false)
         {
-            return isLanguage ? $"{ personName.ToUpper()} person not found " : $"{personName.ToUpper()} kişi bulunamadı";
+            return isLanguage ? $"{ personName.ToUpper()} person not found " : $"{personName.ToUpper()} kişisi bulunamadı";
         }
         public static string Exist(bool isLanguage = false)
         {

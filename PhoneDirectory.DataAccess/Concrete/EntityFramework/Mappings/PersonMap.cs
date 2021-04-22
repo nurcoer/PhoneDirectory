@@ -26,6 +26,9 @@ namespace PhoneDirectory.DataAccess.Concrete.EntityFramework.Mappings
             builder.Property(p => p.Description).IsRequired(false);
             builder.Property(p => p.Description).HasMaxLength(255);
 
+            builder.Property(p => p.PhoneNumber).IsRequired();
+            builder.Property(p => p.PhoneNumber).HasMaxLength(14);
+
 
             builder.HasOne<Directory>(c => c.PhoneDirectory).WithMany(c => c.Persons).HasForeignKey(c => c.PhoneDirectoryId);
 
@@ -37,6 +40,7 @@ namespace PhoneDirectory.DataAccess.Concrete.EntityFramework.Mappings
                    FirstName = "Nur",
                    LastName = "Cöer",
                    Description = "ilk Kişi",
+                   PhoneNumber = "0502 216 24 45"
                });
         }
     }

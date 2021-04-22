@@ -2,7 +2,7 @@
 
 namespace PhoneDirectory.DataAccess.Migrations
 {
-    public partial class initialMigrate : Migration
+    public partial class initializeMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,6 +28,7 @@ namespace PhoneDirectory.DataAccess.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(14)", maxLength: 14, nullable: false),
                     PhoneDirectoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -48,8 +49,8 @@ namespace PhoneDirectory.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "Personels",
-                columns: new[] { "Id", "Description", "FirstName", "LastName", "PhoneDirectoryId" },
-                values: new object[] { 1, "ilk Kişi", "Nur", "Cöer", 1 });
+                columns: new[] { "Id", "Description", "FirstName", "LastName", "PhoneDirectoryId", "PhoneNumber" },
+                values: new object[] { 1, "ilk Kişi", "Nur", "Cöer", 1, "0502 216 24 45" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Personels_PhoneDirectoryId",

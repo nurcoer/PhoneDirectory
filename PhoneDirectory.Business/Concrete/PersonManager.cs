@@ -33,7 +33,7 @@ namespace PhoneDirectory.Business.Concrete
         public IResult Delete(Person person)
         {
             _personDal.Delete(person);
-            return new SuccessResult(PersonMessage.PersonUpdate(person.FirstName));
+            return new SuccessResult(PersonMessage.PersonDelete(person.FirstName));
         }
         public IDataResult<Person> GetById(int id)
         {

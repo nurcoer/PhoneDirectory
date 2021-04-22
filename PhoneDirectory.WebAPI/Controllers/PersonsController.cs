@@ -19,9 +19,9 @@ namespace PhoneDirectory.WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add(Person personService)
+        public IActionResult Add(Person person)
         {
-            var result = _personService.Add(personService);
+            var result = _personService.Add(person);
             if (result.Success)
             {
                 return Ok(result);

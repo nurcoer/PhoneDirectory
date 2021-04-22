@@ -10,10 +10,10 @@ namespace PhoneDirectory.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DirectorysController : ControllerBase
+    public class DirectoriesController : ControllerBase
     {
         IDirectoryService _directoryService;
-        public DirectorysController(IDirectoryService directoryService)
+        public DirectoriesController(IDirectoryService directoryService)
         {
             _directoryService = directoryService;
         }

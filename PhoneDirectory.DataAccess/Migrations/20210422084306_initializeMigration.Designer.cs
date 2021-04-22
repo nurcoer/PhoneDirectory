@@ -9,8 +9,8 @@ using PhoneDirectory.DataAccess.Concrete.EntityFramework.Context;
 namespace PhoneDirectory.DataAccess.Migrations
 {
     [DbContext(typeof(PhoneDirectoryDbContext))]
-    [Migration("20210421155512_initialMigrate")]
-    partial class initialMigrate
+    [Migration("20210422084306_initializeMigration")]
+    partial class initializeMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -68,6 +68,11 @@ namespace PhoneDirectory.DataAccess.Migrations
                     b.Property<int>("PhoneDirectoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("PhoneDirectoryId");
@@ -81,7 +86,8 @@ namespace PhoneDirectory.DataAccess.Migrations
                             Description = "ilk Kişi",
                             FirstName = "Nur",
                             LastName = "Cöer",
-                            PhoneDirectoryId = 1
+                            PhoneDirectoryId = 1,
+                            PhoneNumber = "0502 216 24 45"
                         });
                 });
 
